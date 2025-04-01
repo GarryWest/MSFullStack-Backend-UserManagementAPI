@@ -1,0 +1,28 @@
+### GET: Retrieve all users
+GET http://localhost:5170/users
+
+### GET: Retrieve a specific user by ID
+GET http://localhost:5170/users/1
+
+### POST: Add a new user
+POST http://localhost:5170/users
+Content-Type: application/json
+
+{
+  "ID": 4,
+  "UserName": "John Doe",
+  "UserAge": 30
+}
+
+### PUT: Update an existing user's details
+PUT http://localhost:5170/users/4
+Content-Type: application/json
+
+{
+  "ID": 1,
+  "UserName": "John Smith",
+  "UserAge": 35
+}
+
+### DELETE: Remove a user by ID
+DELETE http://localhost:5170/users/4

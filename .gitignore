@@ -1,0 +1,37 @@
+# Build artifacts
+bin/
+obj/
+
+# User-specific files
+*.user
+*.userosscache
+*.suo
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Visual Studio specific files
+.vscode/
+.vs/
+
+# Rider IDE specific files
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Dependency packages
+packages/
+*.nupkg
+
+# Environment variables and secrets
+*.env
+secrets.json
+
+# Publish artifacts
+publish/
