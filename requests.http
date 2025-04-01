@@ -19,7 +19,7 @@ PUT http://localhost:5170/users/4
 Content-Type: application/json
 
 {
-  "ID": 1,
+  "ID": 4,
   "UserName": "John Smith",
   "UserAge": 35
 }
