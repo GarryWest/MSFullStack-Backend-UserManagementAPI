@@ -26,3 +26,17 @@ Content-Type: application/json
 
 ### DELETE: Remove a user by ID
 DELETE http://localhost:5170/users/4
+
+### throw: Error handling example
+GET http://localhost:5170/throw
+
+### Test /secure endpoint with a valid token
+GET http://localhost:5170/secured
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiVXNlck5hbWUiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyUm9sZSIsImV4cCI6MTc0MzUzMDE2NCwiaXNzIjoieW91cklzc3VlciIsImF1ZCI6InlvdXJBdWRpZW5jZSJ9.S0YvDDPR2CUtPUtsH1DLY_skzAfXAuSICPH4EWL_Nd4
+
+### Test /secure endpoint with an invalid token
+GET http://localhost:5170/secured
+Authorization: Bearer eieioGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiVXNlck5hbWUiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyUm9sZSIsImV4cCI6MTc0MzUyOTg4NywiaXNzIjoieW91cklzc3VlciIsImF1ZCI6InlvdXJBdWRpZW5jZSJ9.oUHtxmdoV1Em4PDyoj_-qAmDFAL9OjUuMN2iWEPbIKg
+
+### Test /secure endpoint without a token
+GET http://localhost:5170/secured
